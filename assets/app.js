@@ -18,6 +18,7 @@ function setText(id, txt){ $(id).textContent = txt; }
 
 function buildFooter(){
   const related = $("relatedTools");
+  related.className = "footlinks";
   related.innerHTML = "";
   const currentDomain = window.location.hostname.replace("www.", "");
   const filteredTools = RELATED_TOOLS.filter(function(t) {
@@ -30,15 +31,16 @@ function buildFooter(){
     a.rel = "noopener";
     a.textContent = t.name;
     related.appendChild(a);
-    const dot = document.createElement("span");
-    dot.textContent = "·";
-    dot.setAttribute("aria-hidden","true");
-    related.appendChild(dot);
   }
-  // Remove trailing dot
-  if (related.lastChild) related.removeChild(related.lastChild);
 
-  setText("partnersEmail", PARTNERSHIPS_EMAIL);
+  const emailEl = $("partnersEmail");
+  if (emailEl){
+    const a = document.createElement("a");
+    a.href = `mailto:${PARTNERSHIPS_EMAIL}`;
+    a.textContent = PARTNERSHIPS_EMAIL;
+    emailEl.innerHTML = "";
+    emailEl.appendChild(a);
+  }
   setText("copyrightYear", String(new Date().getFullYear()));
 }
 
