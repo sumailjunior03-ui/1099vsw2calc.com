@@ -6,13 +6,14 @@ export const SITE_CANONICAL = `https://${SITE_DOMAIN}/`;
 
 export const PARTNERSHIPS_EMAIL = "partnerships@calc-hq.com";
 
-// Portfolio interlinking (update as your stack grows)
+// Portfolio interlinking — all network sites (self-excluded at runtime by app.js)
 export const RELATED_TOOLS = [
-  { name: "PayrollDateChecker.com", url: "https://payrolldatechecker.com/" },
+  { name: "Calc-HQ", url: "https://calc-hq.com/" },
   { name: "BizDayChecker.com", url: "https://bizdaychecker.com/" },
-  { name: "BankCutoffChecker.com", url: "https://bankcutofftimechecker.com/" },
+  { name: "BankCutoffChecker.com", url: "https://bankcutoffchecker.com/" },
   { name: "SalaryVsInflation.com", url: "https://salaryvsinflation.com/" },
-  { name: "Hourly2SalaryCalc.com", url: "https://hourly2salarycalc.com/" },
+  { name: "hourly2salarycalc.com", url: "https://hourly2salarycalc.com/" },
   { name: "TokenToDollarMargin.com", url: "https://tokentodollarmargin.com/" },
+  { name: "PayrollDateChecker.com", url: "https://payrolldatechecker.com/" },
 ];
 

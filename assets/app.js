@@ -19,7 +19,12 @@ function setText(id, txt){ $(id).textContent = txt; }
 function buildFooter(){
   const related = $("relatedTools");
   related.innerHTML = "";
-  for (const t of RELATED_TOOLS){
+  const currentDomain = window.location.hostname.replace("www.", "");
+  const filteredTools = RELATED_TOOLS.filter(function(t) {
+    try { return new URL(t.url).hostname.replace("www.", "") !== currentDomain; }
+    catch(e) { return true; }
+  });
+  for (const t of filteredTools){
     const a = document.createElement("a");
     a.href = t.url;
     a.rel = "noopener";
