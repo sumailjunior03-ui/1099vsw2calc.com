@@ -1,0 +1,14 @@
+- ZIP-MANIFEST.txt (676 bytes) sha256:5ef1029b40dc
+- ads.txt (59 bytes) sha256:2aaaa5a9ba10
+- assets/app.js (5548 bytes) sha256:199ec88887af
+- assets/config.js (888 bytes) sha256:8f5ac1c6ac49
+- assets/core-logic.js (4911 bytes) sha256:b094c5942c61
+- assets/favicon.svg (860 bytes) sha256:9e8a0d1a606c
+- assets/styles.css (3786 bytes) sha256:783482fa3696
+- contact.html (2292 bytes) sha256:af83daa43e8b
+- faq.html (4806 bytes) sha256:e96359b32f16
+- index.html (4981 bytes) sha256:198193deffca
+- legal.html (2801 bytes) sha256:3f4c4cdd3f62
+- privacy.html (2691 bytes) sha256:79d023404624
+- robots.txt (70 bytes) sha256:952e987c7662
+- sitemap.xml (537 bytes) sha256:83b6421e7e0c

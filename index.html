@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>1099 vs W-2 Take‑Home Calculator</title>
+  <meta name="description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="1099 vs W-2 Take‑Home Calculator"/>
+  <meta property="og:description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
+  <meta property="og:url" content="https://1099vsw2calc.com/"/>
+
+  <link rel="canonical" href="https://1099vsw2calc.com/">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <!-- AdSense (verification + future activation). Ads are OFF/hidden by default in CSS. -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <h1>1099 vs W‑2 Take‑Home</h1>
+        <p>US federal only • 2025 brackets • standard deduction • deterministic</p>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/legal.html">Legal</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+
+    
+<div class="grid">
+  <section class="card">
+    <h2>Compare take‑home (same gross)</h2>
+    <p>Enter annual gross. This tool estimates take‑home for <b>W‑2</b> and <b>1099</b> under US federal rules only.</p>
+
+    <form id="calcForm" class="form" novalidate>
+      <label>
+        <span class="label">Annual gross (USD)</span>
+        <input id="gross" class="input" inputmode="decimal" autocomplete="off" aria-label="Annual gross amount in US dollars" placeholder="e.g., 100000"/>
+      </label>
+
+      <button id="calcBtn" class="btn" type="submit" aria-label="Calculate take-home comparison">Calculate</button>
+    </form>
+
+    <div id="resultWrap" class="result" hidden>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+        <span id="badge" class="badge warn">—</span>
+        <span class="small">Gross: <b id="grossOut">—</b></span>
+      </div>
+
+      <div class="hr"></div>
+
+      <table class="table" aria-label="Take-home summary table">
+        <thead>
+          <tr><th>Scenario</th><th>Estimated take‑home</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>W‑2</td><td><b id="w2Take">—</b></td></tr>
+          <tr><td>1099</td><td><b id="cTake">—</b></td></tr>
+          <tr><td>Difference</td><td><b id="diffTake">—</b></td></tr>
+        </tbody>
+      </table>
+
+      <p class="small" id="diffLine" style="margin-top:10px"></p>
+
+      <div class="hr"></div>
+
+      <h2 style="margin:0 0 8px">Breakdown</h2>
+      <table class="table" aria-label="Detailed tax breakdown table">
+        <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+        <tbody id="detailBody"></tbody>
+      </table>
+
+      <div class="ad-slot" data-active="false" aria-label="Ad slot (inactive)"></div>
+      <div class="sponsor-slot" data-active="false" aria-label="Sponsor slot (inactive)"></div>
+
+      <p class="small" style="margin-top:10px">
+        Notes: 1099 assumes net = gross (no expenses modeled). No state taxes. Estimates only—verify with official sources.
+      </p>
+    </div>
+  </section>
+
+  <aside class="card">
+    <h2>What this tool is for</h2>
+    <p>People often ask “Should I take the contractor offer?” This gives a fast, deterministic comparison using:</p>
+    <ul class="small">
+      <li>2025 federal income tax brackets (single filer)</li>
+      <li>standard deduction only</li>
+      <li>W‑2 payroll taxes (employee share)</li>
+      <li>self‑employment tax (92.35% base + 50% deduction)</li>
+    </ul>
+    <div class="kv" aria-label="Tool attributes">
+      <span>Hands‑off</span><span>No accounts</span><span>No tracking</span><span>Runs locally</span>
+    </div>
+    <p class="small" style="margin-top:10px">
+      Disclaimer: Informational estimates only. Not tax or financial advice.
+    </p>
+  </aside>
+</div>
+
+
+    <div class="footer" role="contentinfo">
+      <div class="links">
+        <span>Related tools:</span>
+        <span id="relatedTools"></span>
+      </div>
+      <div class="sub">Sponsored placements &amp; partnerships: <span id="partnersEmail"></span></div>
+      <div class="sub">© <span id="copyrightYear"></span> 1099 vs W‑2 Take‑Home Calculator • Static, browser‑only.</div>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
