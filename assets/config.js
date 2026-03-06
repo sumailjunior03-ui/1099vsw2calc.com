@@ -13,7 +13,6 @@ export const RELATED_TOOLS = [
   { name: "BankCutoffChecker.com", url: "https://bankcutoffchecker.com/" },
   { name: "SalaryVsInflation.com", url: "https://salaryvsinflation.com/" },
   { name: "hourly2salarycalc.com", url: "https://hourly2salarycalc.com/" },
-  { name: "TokenToDollarMargin.com", url: "https://tokentodollarmargin.com/" },
   { name: "PayrollDateChecker.com", url: "https://payrolldatechecker.com/" },
   { name: "FreelanceIncomeCalc.com", url: "https://freelanceincomecalc.com/" },
 ];
