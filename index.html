@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>1099 vs W-2 Take‑Home Calculator</title>
+  <title>1099 vs W-2 Take-Home Calculator | 1099vsw2calc.com</title>
   <meta name="description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="1099 vs W-2 Take‑Home Calculator"/>
+  <meta property="og:title" content="1099 vs W-2 Take-Home Calculator | 1099vsw2calc.com"/>
   <meta property="og:description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
   <meta property="og:url" content="https://1099vsw2calc.com/"/>
 
@@ -16,17 +16,7 @@
   <!-- AdSense (verification + future activation). Ads are OFF/hidden by default in CSS. -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/styles.css"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "1099 vs W-2 Take-Home Calculator",
-    "url": "https://1099vsw2calc.com/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "description": "Compare 1099 vs W-2 take-home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"1099 vs W-2 Take-Home Calculator","url":"https://1099vsw2calc.com/","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","description":"Compare 1099 vs W-2 take-home pay using 2025 US federal brackets, the standard deduction, and self-employment tax modeling.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 </head>
 <body>
   <div class="container">
@@ -98,36 +88,66 @@
   </section>
 
   <aside class="card">
-    <h2>What this tool is for</h2>
-    <p>People often ask “Should I take the contractor offer?” This gives a fast, deterministic comparison using:</p>
+    <h2>What This Calculator Does</h2>
+    <p>This calculator compares the same annual gross amount in a W-2 employee scenario and a 1099 contractor scenario so you can see the estimated federal-only take-home difference.</p>
     <ul class="small">
       <li>2025 federal income tax brackets (single filer)</li>
       <li>standard deduction only</li>
-      <li>W‑2 payroll taxes (employee share)</li>
-      <li>self‑employment tax (92.35% base + 50% deduction)</li>
+      <li>W-2 payroll taxes using employee FICA rates</li>
+      <li>1099 self-employment tax using the 92.35% base and 50% deduction</li>
+      <li>browser-only calculation with no accounts or data storage</li>
     </ul>
     <div class="kv" aria-label="Tool attributes">
-      <span>Hands‑off</span><span>No accounts</span><span>No tracking</span><span>Runs locally</span>
+      <span>Hands-off</span><span>No accounts</span><span>No tracking</span><span>Runs locally</span>
     </div>
-    <p class="small" style="margin-top:10px">
-      Disclaimer: Informational estimates only. Not tax or financial advice.
-    </p>
+    <p class="small" style="margin-top:10px">Disclaimer: Informational estimates only. Not tax or financial advice.</p>
   </aside>
 </div>
 
+<section class="card" style="margin-top:18px">
+  <h2>Example Calculation</h2>
+  <p>Using a sample annual gross of <b>$100,000</b>, the calculator applies federal income tax rules and payroll/self-employment tax rules separately, then subtracts total estimated tax from gross pay for each scenario.</p>
+  <p class="small">The live calculator above loads with a $100,000 example so visitors can immediately see the output structure before changing the number.</p>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <h2>Formula</h2>
+  <p class="small"><b>W-2 take-home</b> = gross wages − federal income tax − employee Social Security tax − employee Medicare tax.</p>
+  <p class="small"><b>1099 take-home</b> = gross receipts − self-employment tax − federal income tax, where self-employment tax is calculated on 92.35% of net earnings and 50% of that tax is deducted before federal income tax is computed.</p>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <h2>Calculation Methodology</h2>
+  <p class="small">For the W-2 side, the calculator starts with gross wages, subtracts the 2025 standard deduction for a single filer to determine taxable income, computes progressive federal income tax using 2025 bracket thresholds, and adds employee FICA taxes made up of 6.2% Social Security tax up to the wage base and 1.45% Medicare tax on all wages.</p>
+  <p class="small">For the 1099 side, the calculator treats gross receipts as net earnings, multiplies those earnings by 92.35% to determine the self-employment tax base, calculates the Social Security and Medicare portions of self-employment tax, deducts 50% of the self-employment tax for income tax purposes, then applies the 2025 standard deduction and 2025 federal income tax brackets. It does not include state income taxes, itemized deductions, business expenses, QBI, credits, benefits, or filing-status variations.</p>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <h2>Common Scenarios</h2>
+  <ul class="small">
+    <li>Comparing a contractor offer against a payroll job with the same gross pay</li>
+    <li>Checking how much extra gross a 1099 role may need to match W-2 take-home</li>
+    <li>Estimating the tax drag of self-employment before accepting freelance work</li>
+    <li>Reviewing federal-only take-home differences before a deeper state-level analysis</li>
+  </ul>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <h2>FAQ</h2>
+  <div class="small">
+    <p><b>Does this include state tax?</b><br/>No. This tool is federal-only.</p>
+    <p><b>Does it model business expenses?</b><br/>No. Version 1 assumes net earnings equal gross receipts.</p>
+    <p><b>Does it use itemized deductions?</b><br/>No. It uses the standard deduction only.</p>
+  </div>
+</section>
 
     <div class="footer" role="contentinfo">
-      <div class="footgrid">
-        <div>
-          <div class="sub" style="font-weight:700;margin-bottom:8px;">Related Tools</div>
-          <div id="relatedTools"></div>
-        </div>
-        <div>
-          <div class="sub" style="font-weight:700;margin-bottom:8px;">Contact</div>
-          <div class="sub">Partnerships: <span id="partnersEmail"></span></div>
-        </div>
+      <div class="links">
+        <span>Related tools:</span>
+        <span id="relatedTools"></span>
       </div>
-      <div class="sub" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">© <span id="copyrightYear"></span> 1099 vs W‑2 Take‑Home Calculator • Static, browser‑only.</div>
+      <div class="sub">Sponsored placements &amp; partnerships: <span id="partnersEmail"></span></div>
+      <div class="sub">© <span id="copyrightYear"></span> 1099 vs W‑2 Take‑Home Calculator • Static, browser‑only.</div>
     </div>
   </div>
 
