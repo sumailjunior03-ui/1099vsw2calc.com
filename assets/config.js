@@ -16,5 +16,6 @@ export const RELATED_TOOLS = [
   { name: "PayrollDateChecker.com", url: "https://payrolldatechecker.com/" },
   { name: "FreelanceIncomeCalc.com", url: "https://freelanceincomecalc.com/" },
   { name: "QuarterlyTaxCalc.com", url: "https://quarterlytaxcalc.com/" },
+  { name: "TotalCompCalc.com", url: "https://totalcompcalc.com/" },
 ];
 
