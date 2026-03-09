@@ -19,6 +19,5 @@ export const RELATED_TOOLS = [
   { name: "TotalCompCalc.com", url: "https://totalcompcalc.com/" },
   { name: "OvertimePayCalc.com", url: "https://overtimepaycalc.com/" },
   { name: "AfterTaxSalaryCalc.com", url: "https://aftertaxsalarycalc.com/" },
-  { name: "TakeHomePayCalc.com",   url: "https://takehomepaycalc.com/" },
 ];
 
