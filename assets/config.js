@@ -8,16 +8,7 @@ export const PARTNERSHIPS_EMAIL = "partnerships@calc-hq.com";
 
 // Portfolio interlinking — all network sites (self-excluded at runtime by app.js)
 export const RELATED_TOOLS = [
-  { name: "Calc-HQ", url: "https://calc-hq.com/" },
-  { name: "BizDayChecker.com", url: "https://bizdaychecker.com/" },
-  { name: "BankCutoffChecker.com", url: "https://bankcutoffchecker.com/" },
-  { name: "SalaryVsInflation.com", url: "https://salaryvsinflation.com/" },
-  { name: "hourly2salarycalc.com", url: "https://hourly2salarycalc.com/" },
-  { name: "PayrollDateChecker.com", url: "https://payrolldatechecker.com/" },
-  { name: "FreelanceIncomeCalc.com", url: "https://freelanceincomecalc.com/" },
+  { name: "Calc-HQ",             url: "https://calc-hq.com/" },
   { name: "QuarterlyTaxCalc.com", url: "https://quarterlytaxcalc.com/" },
-  { name: "TotalCompCalc.com", url: "https://totalcompcalc.com/" },
-  { name: "OvertimePayCalc.com", url: "https://overtimepaycalc.com/" },
-  { name: "AfterTaxSalaryCalc.com", url: "https://aftertaxsalarycalc.com/" },
 ];
 
