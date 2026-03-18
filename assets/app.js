@@ -1,4 +1,4 @@
-import { SITE_NAME, SITE_DOMAIN, SITE_CANONICAL, RELATED_TOOLS, PARTNERSHIPS_EMAIL } from "./config.js";
+import { SITE_NAME, SITE_DOMAIN, SITE_CANONICAL, PARTNERSHIPS_EMAIL } from "./config.js";
 import { compare, CONFIG_2025, TAX_YEAR } from "./core-logic.js";
 
 const $ = (id) => document.getElementById(id);
@@ -14,33 +14,14 @@ function fmtPct(x){
   return (v*100).toFixed(1) + "%";
 }
 
-function setText(id, txt){ $(id).textContent = txt; }
+function setText(id, txt){ document.querySelectorAll(`#${id}`).forEach(el => { el.textContent = txt; }); }
 
 function buildFooter(){
-  const related = $("relatedTools");
-  related.className = "footlinks";
-  related.innerHTML = "";
-  const currentDomain = window.location.hostname.replace("www.", "");
-  const filteredTools = RELATED_TOOLS.filter(function(t) {
-    try { return new URL(t.url).hostname.replace("www.", "") !== currentDomain; }
-    catch(e) { return true; }
-  });
-  for (const t of filteredTools){
-    const a = document.createElement("a");
-    a.href = t.url;
-    a.rel = "noopener";
-    a.textContent = t.name;
-    related.appendChild(a);
+  if (typeof window.renderRelatedTools === "function") {
+    window.renderRelatedTools("relatedTools");
+    window.renderRelatedTools("relatedCalculators");
   }
-
-  const emailEl = $("partnersEmail");
-  if (emailEl){
-    const a = document.createElement("a");
-    a.href = `mailto:${PARTNERSHIPS_EMAIL}`;
-    a.textContent = PARTNERSHIPS_EMAIL;
-    emailEl.innerHTML = "";
-    emailEl.appendChild(a);
-  }
+  setText("partnersEmail", PARTNERSHIPS_EMAIL);
   setText("copyrightYear", String(new Date().getFullYear()));
 }
 
@@ -136,16 +117,7 @@ function onCalc(e){
   render(res);
 }
 
-function initMeta(){
-  document.title = `${SITE_NAME} (US Federal, ${TAX_YEAR})`;
-  const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.href = SITE_CANONICAL;
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.content = `Estimate and compare 1099 vs W‑2 take‑home pay using US federal rules (${TAX_YEAR} brackets), standard deduction only, and self‑employment tax modeling. No accounts. Runs locally in your browser.`;
-}
-
 function init(){
-  initMeta();
   buildFooter();
 
   const form = document.getElementById("calcForm");

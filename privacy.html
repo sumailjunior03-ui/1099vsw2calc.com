@@ -4,30 +4,22 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Privacy Policy | 1099vsw2calc.com</title>
-  <meta name="description" content="Privacy policy for this static calculator. No data collection; runs locally."/>
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="website"/>
+  <meta name="description" content="Privacy policy for 1099vsW2Calc.com, including Google AdSense and cookie disclosure."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="google-adsense-account" content="ca-pub-7744853829365165"/>
+  <meta property="og:type" content="article"/>
   <meta property="og:title" content="Privacy Policy | 1099vsw2calc.com"/>
-  <meta property="og:description" content="Privacy policy for this static calculator. No data collection; runs locally."/>
+  <meta property="og:description" content="Privacy policy for 1099vsW2Calc.com, including Google AdSense and cookie disclosure."/>
   <meta property="og:url" content="https://1099vsw2calc.com/privacy.html"/>
-
+  <meta property="og:site_name" content="1099vsW2Calc.com"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Privacy Policy | 1099vsw2calc.com"/>
+  <meta name="twitter:description" content="Privacy policy for 1099vsW2Calc.com, including Google AdSense and cookie disclosure."/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","url":"https://1099vsw2calc.com/privacy.html","description":"Privacy policy for 1099vsW2Calc.com, including Google AdSense and cookie disclosure."}</script>
   <link rel="canonical" href="https://1099vsw2calc.com/privacy.html">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
-  <meta name="google-adsense-account" content="ca-pub-7744853829365165" />
-  <!-- AdSense (verification + future activation). Ads are OFF/hidden by default in CSS. -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/styles.css"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "1099 vs W-2 Take-Home Calculator",
-    "url": "https://1099vsw2calc.com/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "description": "Compare 1099 vs W-2 take-home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."
-  }
-  </script>
+  <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
   <div class="container">
@@ -36,38 +28,46 @@
         <h1>1099 vs W‑2 Take‑Home</h1>
         <p>US federal only • 2025 brackets • standard deduction • deterministic</p>
       </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/faq">FAQ</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/legal">Legal</a>
-        <a href="/contact">Contact</a>
-      </nav>
+      <nav class="nav" aria-label="Primary"><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/faq.html">FAQ</a><a href="/privacy.html" class="active" aria-current="page">Privacy</a><a href="/legal.html">Legal</a><a href="/contact.html">Contact</a></nav>
     </div>
 
-    
 <section class="card">
-  <h2>Privacy</h2>
-  <p class="small"><b>We do not collect or store personal data.</b> The calculator runs locally in your browser.</p>
-  <div class="hr"></div>
-  <p class="small">Third‑party ads may be enabled in the future via Google AdSense. If enabled, Google may use cookies or similar technologies to serve and measure ads.</p>
-  <p class="small">Hosting/infrastructure: static site served via Cloudflare Pages and source control via GitHub (no user accounts required).</p>
-  <p class="small">Questions: <a href="mailto:partnerships@calc-hq.com">partnerships@calc-hq.com</a></p>
+  <h2>Privacy Policy</h2>
+  <p class="small"><b>Last updated: 2026</b></p>
+  <p class="small">This site does not require accounts and does not store personal financial data entered into the calculator. Calculations run locally in your browser.</p>
 
+  <div class="hr"></div>
+  <h3 class="small" style="color:var(--text);margin:10px 0 6px">Advertising and cookies</h3>
+  <p class="small">This website uses Google AdSense, a third-party advertising service. Google may use cookies to serve ads based on prior visits to this website or other websites.</p>
+  <p class="small">Google's advertising cookies enable it and its partners to serve ads to users based on visits to this site and other sites on the Internet.</p>
+  <p class="small">Users may opt out of personalized advertising by visiting Google Ads Settings.</p>
+  <p class="small">More information about how Google uses data from sites that use its services is available here: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</p>
+
+  <h3 class="small" style="color:var(--text);margin:10px 0 6px">Infrastructure</h3>
+  <p class="small">Hosting and delivery may use standard website infrastructure providers. These services may collect limited technical information such as browser type, device type, and page activity.</p>
+
+  <p class="small">Questions: <b id="partnersEmail"></b></p>
   <div class="ad-slot" data-active="false" aria-label="Ad slot (inactive)"></div>
 </section>
-
 
     <div class="footer" role="contentinfo">
       <div class="links">
         <span>Related tools:</span>
         <span id="relatedTools"></span>
       </div>
+      <div class="links" style="margin-top:6px">
+        <span>Resources:</span>
+        <a href="https://calc-hq.com" rel="noopener">Calc-HQ.com</a>
+      </div>
       <div class="sub">Sponsored placements &amp; partnerships: <span id="partnersEmail"></span></div>
       <div class="sub">© <span id="copyrightYear"></span> 1099 vs W‑2 Take‑Home Calculator • Static, browser‑only.</div>
     </div>
   </div>
 
-  <script type="module" src="assets/app.js"></script>
+  <script src="/network.js"></script>
+  <script src="/assets/config.js" type="module"></script>
+  <script src="/assets/footer.js"></script>
+  <script src="/assets/ads.js"></script>
+  <script type="module" src="/assets/app.js"></script>
 </body>
 </html>

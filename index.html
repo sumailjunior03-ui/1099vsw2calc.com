@@ -4,20 +4,22 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>1099 vs W-2 Take-Home Calculator | 1099vsw2calc.com</title>
-  <meta name="description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Compare 1099 vs W-2 take-home pay using 2025 US federal brackets, the standard deduction, and self-employment tax modeling."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="google-adsense-account" content="ca-pub-7744853829365165"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="1099 vs W-2 Take-Home Calculator | 1099vsw2calc.com"/>
-  <meta property="og:description" content="Compare 1099 vs W‑2 take‑home pay (US federal only). 2025 brackets, standard deduction only, SE tax modeled. Runs locally."/>
+  <meta property="og:description" content="Compare 1099 vs W-2 take-home pay using 2025 US federal brackets, the standard deduction, and self-employment tax modeling."/>
   <meta property="og:url" content="https://1099vsw2calc.com/"/>
-
-  <link rel="canonical" href="https://1099vsw2calc.com/">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
-  <meta name="google-adsense-account" content="ca-pub-7744853829365165" />
-  <!-- AdSense (verification + future activation). Ads are OFF/hidden by default in CSS. -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/styles.css"/>
+  <meta property="og:site_name" content="1099vsW2Calc.com"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="1099 vs W-2 Take-Home Calculator | 1099vsw2calc.com"/>
+  <meta name="twitter:description" content="Compare 1099 vs W-2 take-home pay using 2025 US federal brackets, the standard deduction, and self-employment tax modeling."/>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"1099 vs W-2 Take-Home Calculator","url":"https://1099vsw2calc.com/","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","description":"Compare 1099 vs W-2 take-home pay using 2025 US federal brackets, the standard deduction, and self-employment tax modeling.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="canonical" href="https://1099vsw2calc.com/">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
   <div class="container">
@@ -26,20 +28,13 @@
         <h1>1099 vs W‑2 Take‑Home</h1>
         <p>US federal only • 2025 brackets • standard deduction • deterministic</p>
       </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/faq">FAQ</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/legal">Legal</a>
-        <a href="/contact">Contact</a>
-      </nav>
+      <nav class="nav" aria-label="Primary"><a href="/index.html" class="active" aria-current="page">Home</a><a href="/about.html">About</a><a href="/faq.html">FAQ</a><a href="/privacy.html">Privacy</a><a href="/legal.html">Legal</a><a href="/contact.html">Contact</a></nav>
     </div>
 
-    
 <div class="grid">
   <section class="card">
-    <h2>Compare take‑home (same gross)</h2>
-    <p>Enter annual gross. This tool estimates take‑home for <b>W‑2</b> and <b>1099</b> under US federal rules only.</p>
+    <h2>Calculator Tool</h2>
+    <p>Enter annual gross pay once. This tool estimates take-home for <b>W-2</b> and <b>1099</b> income under US federal rules only.</p>
 
     <form id="calcForm" class="form" novalidate>
       <label>
@@ -60,10 +55,10 @@
 
       <table class="table" aria-label="Take-home summary table">
         <thead>
-          <tr><th>Scenario</th><th>Estimated take‑home</th></tr>
+          <tr><th>Scenario</th><th>Estimated take-home</th></tr>
         </thead>
         <tbody>
-          <tr><td>W‑2</td><td><b id="w2Take">—</b></td></tr>
+          <tr><td>W-2</td><td><b id="w2Take">—</b></td></tr>
           <tr><td>1099</td><td><b id="cTake">—</b></td></tr>
           <tr><td>Difference</td><td><b id="diffTake">—</b></td></tr>
         </tbody>
@@ -73,7 +68,7 @@
 
       <div class="hr"></div>
 
-      <h2 style="margin:0 0 8px">Breakdown</h2>
+      <h3 style="margin:0 0 8px">Breakdown</h3>
       <table class="table" aria-label="Detailed tax breakdown table">
         <thead><tr><th>Item</th><th>Amount</th></tr></thead>
         <tbody id="detailBody"></tbody>
@@ -89,6 +84,9 @@
   </section>
 
   <aside class="card">
+    <h2>When This Calculator Is Useful</h2>
+    <p class="small">Use this calculator when you have received a job offer or contract proposal and need to understand how different worker classifications affect your federal take-home pay. It is especially helpful when comparing a 1099 contractor offer against a W-2 salaried position with the same gross amount.</p>
+
     <h2>What This Calculator Does</h2>
     <p>This calculator compares the same annual gross amount in a W-2 employee scenario and a 1099 contractor scenario so you can see the estimated federal-only take-home difference.</p>
     <ul class="small">
@@ -120,7 +118,7 @@
 <section class="card" style="margin-top:18px">
   <h2>Calculation Methodology</h2>
   <p class="small">For the W-2 side, the calculator starts with gross wages, subtracts the 2025 standard deduction for a single filer to determine taxable income, computes progressive federal income tax using 2025 bracket thresholds, and adds employee FICA taxes made up of 6.2% Social Security tax up to the wage base and 1.45% Medicare tax on all wages.</p>
-  <p class="small">For the 1099 side, the calculator treats gross receipts as net earnings, multiplies those earnings by 92.35% to determine the self-employment tax base, calculates the Social Security and Medicare portions of self-employment tax, deducts 50% of the self-employment tax for income tax purposes, then applies the 2025 standard deduction and 2025 federal income tax brackets. It does not include state income taxes, itemized deductions, business expenses, QBI, credits, benefits, or filing-status variations.</p>
+  <p class="small">For the 1099 side, the calculator treats gross receipts as net earnings in version 1, multiplies those earnings by 92.35% to determine the self-employment tax base, calculates the Social Security and Medicare portions of self-employment tax, deducts 50% of the self-employment tax for income tax purposes, then applies the 2025 standard deduction and 2025 federal income tax brackets. It does not include state income taxes, itemized deductions, business expenses, QBI, credits, benefits, or filing-status variations.</p>
 </section>
 
 <section class="card" style="margin-top:18px">
@@ -142,16 +140,30 @@
   </div>
 </section>
 
+<section class="card" style="margin-top:18px">
+  <h2>Related Calculators</h2>
+  <p class="small">These links render from the shared network file only.</p>
+  <div id="relatedCalculators" class="links"></div>
+</section></div>
+
     <div class="footer" role="contentinfo">
       <div class="links">
         <span>Related tools:</span>
         <span id="relatedTools"></span>
+      </div>
+      <div class="links" style="margin-top:6px">
+        <span>Resources:</span>
+        <a href="https://calc-hq.com" rel="noopener">Calc-HQ.com</a>
       </div>
       <div class="sub">Sponsored placements &amp; partnerships: <span id="partnersEmail"></span></div>
       <div class="sub">© <span id="copyrightYear"></span> 1099 vs W‑2 Take‑Home Calculator • Static, browser‑only.</div>
     </div>
   </div>
 
-  <script type="module" src="assets/app.js"></script>
+  <script src="/network.js"></script>
+  <script src="/assets/config.js" type="module"></script>
+  <script src="/assets/footer.js"></script>
+  <script src="/assets/ads.js"></script>
+  <script type="module" src="/assets/app.js"></script>
 </body>
 </html>
