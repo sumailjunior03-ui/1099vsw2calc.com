@@ -28,6 +28,7 @@ function renderRelatedTools(listElementId) {
     if (site.live !== true) continue;
     const domain = normalizeDomain(site.domain);
     if (!domain) continue;
+    if (domain === "calc-hq.com") continue;
     if (host && domain === host) continue;
 
     if (!first) {
