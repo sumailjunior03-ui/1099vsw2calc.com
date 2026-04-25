@@ -1,3 +1,6 @@
+/* GA4 - Calc-HQ Network Analytics (single injection point) */
+(function(){if(!window.__GA4_LOADED){window.__GA4_LOADED=true;var id="G-W4SWZ1YRS2";var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}gtag("js",new Date());gtag("config",id);}})();
+
 const CALC_HQ_NETWORK = [
   { domain: "calc-hq.com",              name: "Calc-HQ",                     live: true },
   { domain: "bizdaychecker.com",        name: "BizDayChecker.com",           live: true },
