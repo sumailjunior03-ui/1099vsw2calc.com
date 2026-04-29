@@ -19,7 +19,7 @@
   <link rel="canonical" href="https://1099vsw2calc.com/">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/assets/styles.css"/>
+  <link rel="stylesheet" href="/assets/styles.css?v=layout-repair-0429"/>
 </head>
 <body>
   <div class="container">
@@ -84,18 +84,13 @@
   </section>
 
   <aside class="card">
-    <h2>When This Calculator Is Useful</h2>
-    <p class="small">Use this calculator when you have received a job offer or contract proposal and need to understand how different worker classifications affect your federal take-home pay. It is especially helpful when comparing a 1099 contractor offer against a W-2 salaried position with the same gross amount.</p>
+    <h2>What You'll See</h2>
+    <p class="small">At $100,000 gross income, a W-2 employee takes home about <b>$78,901</b> while a 1099 contractor takes home about <b>$73,976</b>. The W-2 scenario keeps roughly <b>$4,925 more</b>. The gap comes mainly from self-employment tax — as a 1099 contractor, you pay both the employer and employee portions of Social Security and Medicare.</p>
 
-    <h2>What This Calculator Does</h2>
-    <p>This calculator compares the same annual gross amount in a W-2 employee scenario and a 1099 contractor scenario so you can see the estimated federal-only take-home difference.</p>
-    <ul class="small">
-      <li>2025 federal income tax brackets (single filer)</li>
-      <li>standard deduction only</li>
-      <li>W-2 payroll taxes using employee FICA rates</li>
-      <li>1099 self-employment tax using the 92.35% base and 50% deduction</li>
-      <li>browser-only calculation with no accounts or data storage</li>
-    </ul>
+    <h2>How 1099 and W-2 Are Taxed Differently</h2>
+    <p class="small">W-2 employees pay <b>7.65% FICA</b> — 6.2% Social Security plus 1.45% Medicare. The employer pays the other 7.65%. You never see that half on your paystub, but it's being covered.</p>
+    <p class="small">1099 contractors pay <b>15.3% self-employment tax</b> — both halves combined. But two adjustments soften the blow: first, SE tax is calculated on <b>92.35% of your earnings</b>, not the full amount (IRC §1402(a)(12)). Second, you deduct <b>50% of SE tax</b> from your income before calculating federal income tax (IRC §164(f)).</p>
+    <p class="small">The net effect: at $100,000 gross, a 1099 contractor pays about <b>$14,130 in SE tax</b> versus <b>$7,650 in W-2 FICA</b>. Even after the 50% deduction reduces your income tax, you still come out behind by roughly $4,925.</p>
     <div class="kv" aria-label="Tool attributes">
       <span>Hands-off</span><span>No accounts</span><span>No tracking</span><span>Runs locally</span>
     </div>
@@ -104,47 +99,99 @@
 </div>
 
 <section class="card" style="margin-top:18px">
-  <h2>Example Calculation</h2>
-  <p>Using a sample annual gross of <b>$100,000</b>, the calculator applies federal income tax rules and payroll/self-employment tax rules separately, then subtracts total estimated tax from gross pay for each scenario.</p>
-  <p class="small">The live calculator above loads with a $100,000 example so visitors can immediately see the output structure before changing the number.</p>
+  <h2>Example Calculation: $100,000 Gross</h2>
+
+  <h3>W-2 employee</h3>
+  <table class="table">
+    <tbody>
+      <tr><td>Gross income</td><td>$100,000</td></tr>
+      <tr><td>Standard deduction</td><td>−$15,750</td></tr>
+      <tr><td>Taxable income</td><td>$84,250</td></tr>
+      <tr><td>Federal income tax</td><td>$13,449</td></tr>
+      <tr><td>Social Security tax (6.2%)</td><td>$6,200</td></tr>
+      <tr><td>Medicare tax (1.45%)</td><td>$1,450</td></tr>
+      <tr><td><b>Total tax</b></td><td><b>$21,099</b></td></tr>
+      <tr><td><b>Take-home</b></td><td><b>$78,901</b></td></tr>
+    </tbody>
+  </table>
+
+  <h3>1099 contractor</h3>
+  <table class="table">
+    <tbody>
+      <tr><td>Gross income</td><td>$100,000</td></tr>
+      <tr><td>SE tax base (92.35% of gross)</td><td>$92,350</td></tr>
+      <tr><td>Self-employment tax</td><td>$14,130</td></tr>
+      <tr><td>50% SE deduction</td><td>−$7,065</td></tr>
+      <tr><td>Adjusted gross after SE deduction</td><td>$92,935</td></tr>
+      <tr><td>Standard deduction</td><td>−$15,750</td></tr>
+      <tr><td>Taxable income</td><td>$77,185</td></tr>
+      <tr><td>Federal income tax</td><td>$11,895</td></tr>
+      <tr><td><b>Total tax (income + SE)</b></td><td><b>$26,024</b></td></tr>
+      <tr><td><b>Take-home</b></td><td><b>$73,976</b></td></tr>
+    </tbody>
+  </table>
+
+  <p class="small" style="margin-top:10px">At the same $100,000 gross income, the W-2 scenario keeps about <b>$4,925 more</b>.</p>
+
+  <h3>What happens at higher income?</h3>
+  <p class="small">At $200,000 gross, the W-2 advantage grows to <b>$10,111</b>. But at $300,000, it shrinks slightly to <b>$9,375</b>. That surprises most people. Here's why: Social Security tax is capped at $176,100 in wages. Once you pass that threshold, neither classification pays the 6.2% or 12.4% SS portion on additional income. Meanwhile, the 50% SE deduction keeps reducing the 1099 contractor's taxable income at higher brackets — so the gap narrows even though the 1099 contractor still pays more Medicare (2.9% vs 1.45% on every dollar).</p>
 </section>
 
 <section class="card" style="margin-top:18px">
-  <h2>Formula</h2>
-  <p class="small"><b>W-2 take-home</b> = gross wages − federal income tax − employee Social Security tax − employee Medicare tax.</p>
-  <p class="small"><b>1099 take-home</b> = gross receipts − self-employment tax − federal income tax, where self-employment tax is calculated on 92.35% of net earnings and 50% of that tax is deducted before federal income tax is computed.</p>
+  <h2>How This Tool Calculates</h2>
+  <p class="small"><b>W-2 path:</b> gross → standard deduction → taxable income → federal brackets → income tax + employee FICA (6.2% SS up to $176,100, 1.45% Medicare) → take-home.</p>
+  <p class="small"><b>1099 path:</b> gross → 92.35% SE base → self-employment tax (12.4% SS up to $176,100, 2.9% Medicare) → 50% SE deduction → adjusted gross → standard deduction → taxable income → federal brackets → income tax + SE tax → take-home.</p>
+  <p class="small">The 1099 side assumes all gross receipts are net earnings (Schedule C with no business expenses). Self-employment tax is computed per Schedule SE. This is a federal-only estimate for a single filer using the 2025 standard deduction.</p>
 </section>
 
 <section class="card" style="margin-top:18px">
-  <h2>Calculation Methodology</h2>
-  <p class="small">For the W-2 side, the calculator starts with gross wages, subtracts the 2025 standard deduction for a single filer to determine taxable income, computes progressive federal income tax using 2025 bracket thresholds, and adds employee FICA taxes made up of 6.2% Social Security tax up to the wage base and 1.45% Medicare tax on all wages.</p>
-  <p class="small">For the 1099 side, the calculator treats gross receipts as net earnings in version 1, multiplies those earnings by 92.35% to determine the self-employment tax base, calculates the Social Security and Medicare portions of self-employment tax, deducts 50% of the self-employment tax for income tax purposes, then applies the 2025 standard deduction and 2025 federal income tax brackets. It does not include state income taxes, itemized deductions, business expenses, QBI, credits, benefits, or filing-status variations.</p>
+  <h2>Data Sources</h2>
+  <ul class="small">
+    <li><b>2025 federal income tax brackets</b> — IRS Revenue Procedure</li>
+    <li><b>Standard deduction:</b> $15,750 (single filer, 2025) — IRS</li>
+    <li><b>Social Security wage base:</b> $176,100 (2025) — SSA</li>
+    <li><b>Self-employment tax rate:</b> 15.3% (12.4% SS + 2.9% Medicare) — IRC §1401</li>
+    <li><b>92.35% SE adjustment:</b> IRC §1402(a)(12)</li>
+    <li><b>50% SE tax deduction:</b> IRC §164(f)</li>
+    <li><b>W-2 FICA vs 1099 SE tax:</b> 7.65% employee share vs 15.3% self-employment</li>
+  </ul>
+  <p class="small">These are 2025 federal values and may change after tax law or inflation adjustments.</p>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <h2>Limitations</h2>
+  <ul class="small">
+    <li><b>No state or local taxes.</b> State income tax can add 5–13% on top of federal in high-tax states like California or New York. Ignoring it makes the 1099 gap look smaller than it really is.</li>
+    <li><b>No QBI deduction.</b> Section 199A allows up to a 20% deduction on qualified business income, which can significantly reduce 1099 federal income tax. Not modeling it means the 1099 side overstates tax burden.</li>
+    <li><b>Single filer only.</b> Married filing jointly has different brackets and a $31,500 standard deduction. Results would differ substantially.</li>
+    <li><b>Additional Medicare Tax not modeled.</b> This calculator does not model the 0.9% Additional Medicare Tax on earned income above $200,000 for single filers, so high-income results may slightly overstate take-home pay.</li>
+    <li><b>No business expense deductions.</b> The 1099 side assumes net earnings equal gross income. Real contractors may deduct eligible business expenses, which can reduce both income tax and self-employment tax.</li>
+    <li><b>No employer benefit valuation.</b> W-2 compensation may include health insurance, retirement match, paid time off, or other benefits not shown in take-home pay.</li>
+    <li><b>Tax year 2025 only.</b> Brackets and thresholds change annually. Values may not be current.</li>
+  </ul>
 </section>
 
 <section class="card" style="margin-top:18px">
   <h2>Common Scenarios</h2>
   <ul class="small">
-    <li>Comparing a contractor offer against a payroll job with the same gross pay</li>
-    <li>Checking how much extra gross a 1099 role may need to match W-2 take-home</li>
-    <li>Estimating the tax drag of self-employment before accepting freelance work</li>
-    <li>Reviewing federal-only take-home differences before a deeper state-level analysis</li>
+    <li><b>Freelancer comparing a $120K 1099 contract vs a $100K W-2 offer.</b> The higher gross on the 1099 side might look better on paper, but after self-employment tax ($14,130 at $120K vs $7,650 FICA at $100K), the take-home gap narrows significantly. Run both numbers through the calculator to see the real difference.</li>
+    <li><b>Employee considering going independent.</b> If your employer offers a $100K W-2 salary, you'd need to earn roughly $106,500 as a 1099 contractor just to match the same federal take-home — and that's before accounting for health insurance or retirement benefits you'd lose.</li>
+    <li><b>Employer or worker evaluating classification impact.</b> The IRS uses a 20-factor test to determine whether a worker should be classified as W-2 or 1099. Misclassification can trigger back taxes and penalties. This calculator shows the federal tax difference between classifications but does not assess legal classification.</li>
   </ul>
 </section>
 
 <section class="card" style="margin-top:18px">
   <h2>FAQ</h2>
   <div class="small">
-    <p><b>Does this include state tax?</b><br/>No. This tool is federal-only.</p>
-    <p><b>Does it model business expenses?</b><br/>No. Version 1 assumes net earnings equal gross receipts.</p>
-    <p><b>Does it use itemized deductions?</b><br/>No. It uses the standard deduction only.</p>
+    <p><b>Why does 1099 show lower take-home at the same gross?</b><br/>Because 1099 contractors pay self-employment tax at 15.3% — both the employer and employee halves of FICA. W-2 employees only pay 7.65%; the employer covers the rest. That difference alone accounts for most of the take-home gap.</p>
+    <p><b>What is the 92.35% self-employment tax adjustment?</b><br/>The IRS doesn't make you pay SE tax on 100% of your earnings. Under IRC §1402(a)(12), only 92.35% of your net self-employment earnings are subject to SE tax. This roughly accounts for the employer-half deduction that W-2 employees don't pay.</p>
+    <p><b>Does this include the QBI deduction?</b><br/>No. The Qualified Business Income deduction (Section 199A) can reduce 1099 income tax by up to 20% of qualified business income. This tool does not model it, so the 1099 side may overstate your actual tax burden.</p>
+    <p><b>Does this include state taxes?</b><br/>No. This is federal-only. If you live in a state with income tax (California, New York, etc.), your real take-home will be lower for both classifications — and the 1099 gap may grow wider.</p>
+    <p><b>Is a $X/hour 1099 rate equal to the same $X/hour W-2 rate?</b><br/>No. A $50/hour 1099 contract and a $50/hour W-2 wage are not equivalent after taxes. The 1099 rate needs to be higher to compensate for the self-employment tax burden. Annualize both rates and run them through this calculator to see the real difference.</p>
   </div>
 </section>
 
-<section class="card" style="margin-top:18px">
-  <h2>Related Calculators</h2>
-  <p class="small">These links render from the shared network file only.</p>
-  <div id="relatedCalculators" class="links"></div>
-</section></div>
+</div>
 
     <div class="footer" role="contentinfo">
       <div class="links">
@@ -162,7 +209,6 @@
 
   <script src="/network.js"></script>
   <script src="/assets/config.js" type="module"></script>
-  <script src="/assets/footer.js"></script>
   <script src="/assets/ads.js"></script>
   <script type="module" src="/assets/app.js"></script>
 </body>

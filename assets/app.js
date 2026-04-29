@@ -19,7 +19,6 @@ function setText(id, txt){ document.querySelectorAll(`#${id}`).forEach(el => { e
 function buildFooter(){
   if (typeof window.renderRelatedTools === "function") {
     window.renderRelatedTools("relatedTools");
-    window.renderRelatedTools("relatedCalculators");
   }
   setText("partnersEmail", PARTNERSHIPS_EMAIL);
   setText("copyrightYear", String(new Date().getFullYear()));
