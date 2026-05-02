@@ -55,6 +55,7 @@ function render(result){
     ["W‑2 payroll taxes (FICA)", fmtUSD(w2.payrollTax)],
     ["— Social Security (6.2% up to wage base)", fmtUSD(w2.payrollTaxBreakdown.ssTax)],
     ["— Medicare (1.45%)", fmtUSD(w2.payrollTaxBreakdown.medicareTax)],
+    ["— Additional Medicare (0.9% above $200K)", fmtUSD(w2.payrollTaxBreakdown.additionalMedicareTax)],
     ["W‑2 total tax", fmtUSD(w2.totalTax)],
     ["W‑2 effective tax rate", fmtPct(w2.effectiveTaxRate)],
     ["", ""],

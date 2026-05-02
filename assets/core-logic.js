@@ -32,6 +32,9 @@ export const CONFIG_2025 = {
   ssWageBase: 176100,
   // SE tax applies to 92.35% of net earnings:
   seEarningsFactor: 0.9235,
+  // Additional Medicare Tax (employee share):
+  additionalMedicareRate: 0.009,
+  additionalMedicareThreshold: 200000,
 };
 
 /** Clamp to >= 0 */
@@ -63,7 +66,8 @@ export function ficaEmployee(wages, cfg = CONFIG_2025) {
   const w = nonNeg(wages);
   const ssTax = Math.min(w, cfg.ssWageBase) * cfg.ssRateEmployee;
   const medicareTax = w * cfg.medicareRateEmployee;
-  return { ssTax, medicareTax, ficaTax: ssTax + medicareTax };
+  const additionalMedicareTax = w > cfg.additionalMedicareThreshold ? (w - cfg.additionalMedicareThreshold) * cfg.additionalMedicareRate : 0;
+  return { ssTax, medicareTax, additionalMedicareTax, ficaTax: ssTax + medicareTax + additionalMedicareTax };
 }
 
 /**
