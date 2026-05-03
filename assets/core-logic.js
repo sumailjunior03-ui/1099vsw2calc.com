@@ -1,26 +1,26 @@
 /**
  * 1099 vs W-2 Take-Home (US Federal Only) — Core Logic
  * Deterministic, browser-only.
- * Scope: 2025 federal brackets (IRS), standard deduction only, no state taxes, no QBI, no AMT.
+ * Scope: 2026 federal brackets (IRS), standard deduction only, no state taxes, no QBI, no AMT.
  */
 
-export const TAX_YEAR = 2025;
+export const TAX_YEAR = 2026;
 
 // Sources (for copy/FAQ; logic is hardcoded for determinism):
-// - IRS tax brackets (2025): https://www.irs.gov/filing/federal-income-tax-rates-and-brackets
-// - SSA contribution & benefit base (2025): https://www.ssa.gov/oact/cola/cbb.html
+// - IRS tax brackets (2026): https://www.irs.gov/filing/federal-income-tax-rates-and-brackets
+// - SSA contribution & benefit base (2026): https://www.ssa.gov/oact/cola/cbb.html
 
-export const CONFIG_2025 = {
-  standardDeductionSingle: 15750, // IRS newsroom notes TY2025 under current law adjustments.
+export const CONFIG_2026 = {
+  standardDeductionSingle: 16100, // IRS Rev Proc 2025-32 / IR-2025-103
   // Federal income tax brackets — Single filer — taxable income thresholds.
   // Each bracket: [cap, rate] where cap is upper bound (inclusive) for that bracket.
   incomeBracketsSingle: [
-    [11925, 0.10],
-    [48475, 0.12],
-    [103350, 0.22],
-    [197300, 0.24],
-    [250525, 0.32],
-    [626350, 0.35],
+    [12400, 0.10],
+    [50400, 0.12],
+    [105700, 0.22],
+    [201775, 0.24],
+    [256225, 0.32],
+    [640600, 0.35],
     [Infinity, 0.37],
   ],
   // Payroll taxes (employee share) / Self-employment taxes:
@@ -28,8 +28,8 @@ export const CONFIG_2025 = {
   ssRateSelfEmployed: 0.124,
   medicareRateEmployee: 0.0145,
   medicareRateSelfEmployed: 0.029,
-  // Social Security wage base (2025):
-  ssWageBase: 176100,
+  // Social Security wage base (2026):
+  ssWageBase: 184500,
   // SE tax applies to 92.35% of net earnings:
   seEarningsFactor: 0.9235,
   // Additional Medicare Tax (employee share):
@@ -62,7 +62,7 @@ export function progressiveTax(taxableIncome, brackets) {
 }
 
 /** Employee payroll (FICA) taxes for W-2 wages */
-export function ficaEmployee(wages, cfg = CONFIG_2025) {
+export function ficaEmployee(wages, cfg = CONFIG_2026) {
   const w = nonNeg(wages);
   const ssTax = Math.min(w, cfg.ssWageBase) * cfg.ssRateEmployee;
   const medicareTax = w * cfg.medicareRateEmployee;
@@ -77,7 +77,7 @@ export function ficaEmployee(wages, cfg = CONFIG_2025) {
  * - Medicare portion uncapped
  * - 50% deduction of SE tax for income tax purposes
  */
-export function selfEmploymentTax(netEarnings, cfg = CONFIG_2025) {
+export function selfEmploymentTax(netEarnings, cfg = CONFIG_2026) {
   const net = nonNeg(netEarnings);
   const seBase = net * cfg.seEarningsFactor;
   const ssPortion = Math.min(seBase, cfg.ssWageBase) * cfg.ssRateSelfEmployed;
@@ -88,7 +88,7 @@ export function selfEmploymentTax(netEarnings, cfg = CONFIG_2025) {
 }
 
 /** W-2 scenario (single filer, standard deduction only) */
-export function w2TakeHome(grossWages, cfg = CONFIG_2025) {
+export function w2TakeHome(grossWages, cfg = CONFIG_2026) {
   const gross = nonNeg(grossWages);
   const taxable = nonNeg(gross - cfg.standardDeductionSingle);
   const incomeTax = progressiveTax(taxable, cfg.incomeBracketsSingle);
@@ -110,7 +110,7 @@ export function w2TakeHome(grossWages, cfg = CONFIG_2025) {
 }
 
 /** 1099 scenario (single filer, standard deduction only, SE tax modeled) */
-export function contractorTakeHome(gross1099, cfg = CONFIG_2025) {
+export function contractorTakeHome(gross1099, cfg = CONFIG_2026) {
   const gross = nonNeg(gross1099);
   // v1: no expenses modeling, so net = gross
   const se = selfEmploymentTax(gross, cfg);
@@ -139,7 +139,7 @@ export function contractorTakeHome(gross1099, cfg = CONFIG_2025) {
 }
 
 /** Compare W-2 vs 1099 for same gross input */
-export function compare(grossAnnual, cfg = CONFIG_2025) {
+export function compare(grossAnnual, cfg = CONFIG_2026) {
   const w2 = w2TakeHome(grossAnnual, cfg);
   const c = contractorTakeHome(grossAnnual, cfg);
   const diff = c.takeHome - w2.takeHome;

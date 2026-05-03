@@ -1,5 +1,5 @@
 import { SITE_NAME, SITE_DOMAIN, SITE_CANONICAL, PARTNERSHIPS_EMAIL } from "./config.js";
-import { compare, CONFIG_2025, TAX_YEAR } from "./core-logic.js";
+import { compare, CONFIG_2026, TAX_YEAR } from "./core-logic.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -113,7 +113,7 @@ function onCalc(e){
     $("detailBody").innerHTML = "";
     return;
   }
-  const res = compare(gross, CONFIG_2025);
+  const res = compare(gross, CONFIG_2026);
   render(res);
 }
 
